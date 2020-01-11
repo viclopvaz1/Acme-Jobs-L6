@@ -20,6 +20,7 @@
 	<acme:form-password code="authenticated.user-account.form.label.password" path="password"/>
 	<acme:form-password code="authenticated.user-account.form.label.confirmation" path="confirmation"/>
 	
+	<acme:form-phone code="authenticated.user-account.form.label.phone" path="identity.phone"/>
 	<acme:form-textbox code="authenticated.user-account.form.label.name" path="identity.name"/>
 	<acme:form-textbox code="authenticated.user-account.form.label.surname" path="identity.surname"/>
 	<acme:form-textbox code="authenticated.user-account.form.label.email" path="identity.email"/>
