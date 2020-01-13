@@ -26,7 +26,7 @@ public class Phone extends DomainDatatype {
 	@Pattern(regexp = "\\d{1,6}", message = "default.error.conversion")
 	private String				areaCode;
 
-	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}{0,5}", message = "default.error.conversion")
+	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}){0,5}", message = "default.error.conversion")
 	private String				number;
 
 

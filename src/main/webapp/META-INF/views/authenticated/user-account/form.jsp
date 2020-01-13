@@ -15,6 +15,9 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
+
+
 <acme:form>
 	<acme:form-textbox code="authenticated.user-account.form.label.username" path="username" readonly="true"/>
 	<acme:form-password code="authenticated.user-account.form.label.password" path="password"/>
