@@ -75,6 +75,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `image_url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,

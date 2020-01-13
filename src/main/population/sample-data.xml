@@ -631,11 +631,31 @@
 		<property name="title" value="Sample thread 2" />
 		<property name="moment" value="2030/12/11 23:59" />
 		<property name="creatorUser" ref="employer1Authenticated"/>
-		</bean>
+	</bean>
 		
-		<bean name="participation01" class="acme.entities.participations.Participation">
+	<bean name="participation01" class="acme.entities.participations.Participation">
 		<property name="thread" ref="thread01"/>
 		<property name="authenticated" ref="worker1Authenticathed" />
-		</bean>
+	</bean>
+	
+	<bean name="banner01" class="acme.entities.banners.Banner">
+		<property name="imageUrl" value="https://i.imgur.com/8YcXhS0.png"/>
+	</bean>
+	
+	<bean name="banner02" class="acme.entities.banners.Banner">
+		<property name="imageUrl" value="https://i.imgur.com/NGLSjk6.png"/>
+	</bean>
+	
+	<bean name="banner03" class="acme.entities.banners.Banner">
+		<property name="imageUrl" value="https://i.imgur.com/2eVF1HG.png"/>
+	</bean>
+	
+	<bean name="banner04" class="acme.entities.banners.Banner">
+		<property name="imageUrl" value="https://i.imgur.com/fihihcF.png"/>
+	</bean>
+	
+	<bean name="banner05" class="acme.entities.banners.Banner">
+		<property name="imageUrl" value="https://i.imgur.com/MtBRoNP.png"/>
+	</bean>
 	
 </beans>
