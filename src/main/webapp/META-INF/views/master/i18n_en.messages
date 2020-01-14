@@ -61,11 +61,6 @@ master.menu.administrator.list-company-record = List Company Record
 master.menu.administrator.create-company-record = Create Company Record
 master.menu.administrator.list-challenge = List Challenge
 master.menu.administrator.challenge = Create Challenge
-master.menu.administrator.list-comercial-banner = List Comercial Banner
-master.menu.administrator.comercial-banner = Create Comercial Banner
-
-master.menu.administrator.create-non-comercial-banner = Create non comercial banner
-master.menu.administrator.list-non-comercial-banner = List non comercial banner
 master.menu.administrator.list.auditor = List auditor request 
 
 # master.menu.auditor   ########################################################
@@ -76,12 +71,6 @@ master.menu.user-account.auditor =  Auditor data
 master.menu.worker = Worker
 master.menu.worker.application.list-mine = List her applications
 master.menu.worker.job.list = List of jobs
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.create-request = Create Request
-#master.menu.employer.list-mine-job = List Jobs
 
 # master.menu.employer ########################################################
 
@@ -104,11 +93,6 @@ master.menu.sponsor.list-mine-comercial-banner = List Sponsor Comercial Banner
 master.menu.sponsor.create-comercial-banner = Create Comercial Banner
 master.menu.sponsor.list-mine-non-comercial-banner = List Sponsor Non Comercial Banner
 master.menu.sponsor.create-non-comercial-banner = Create Non Comercial Banner
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.create-offer = Create Offer
 
 # master.menu.user-account ####################################################
 
