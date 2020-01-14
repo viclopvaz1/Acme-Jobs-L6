@@ -15,26 +15,25 @@ import acme.framework.helpers.StringHelper;
 public class PhoneFormatter implements Formatter<Phone> {
 
 	@Override
-	public String print(final Phone object, final Locale locate) {
+	public String print(final Phone object, final Locale locale) {
 		assert object != null;
-		assert locate != null;
+		assert locale != null;
 
 		String result;
 		String countryCodeText, areaCodeText, numberText;
 
-		countryCodeText = String.format("+%d", object.getCountryCode());
-		areaCodeText = object.getAreaCode() == null ? "" : String.format(" (%s) ", object.getAreaCode());
+		countryCodeText = String.format("%d", object.getCountryCode());
+		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%s) ", object.getAreaCode());
 		numberText = String.format("%s", object.getNumber());
 
-		result = String.format("%s%s%s", countryCodeText, areaCodeText, numberText);
+		result = String.format("+%s%s%s", countryCodeText, areaCodeText, numberText);
 
-		return result.toString();
+		return result;
 	}
-
 	@Override
-	public Phone parse(final String text, final Locale locate) throws ParseException {
+	public Phone parse(final String text, final Locale locale) throws ParseException {
 		assert !StringHelper.isBlank(text);
-		assert locate != null;
+		assert locale != null;
 
 		Phone result;
 		String countryCodeRegex, areaCodeRegex, numberRegex, phoneRegex;
@@ -47,14 +46,16 @@ public class PhoneFormatter implements Formatter<Phone> {
 
 		countryCodeRegex = "\\+\\d{1,3}";
 		areaCodeRegex = "\\d{1,6}";
-		numberRegex = "\\d{1,9}([\\s-]\\d{1,9}){0,5}";
-		phoneRegex = String.format("^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$", countryCodeRegex, areaCodeRegex, numberRegex);
+		numberRegex = "\\d{1,9}([\\s-]\\d{1,9}){0,4}";
+		phoneRegex = String.format(//
+			"^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$",//
+			countryCodeRegex, areaCodeRegex, numberRegex);
 
 		pattern = Pattern.compile(phoneRegex, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 		matcher = pattern.matcher(text);
 
 		if (!matcher.find()) {
-			errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locate);
+			errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);
 			throw new ParseException(0, errorMessage);
 		} else {
 			countryCodeText = matcher.group("CC");
@@ -70,4 +71,5 @@ public class PhoneFormatter implements Formatter<Phone> {
 
 		return result;
 	}
+
 }

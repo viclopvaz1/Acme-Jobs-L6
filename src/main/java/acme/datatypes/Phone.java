@@ -2,6 +2,7 @@
 package acme.datatypes;
 
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -16,25 +17,29 @@ import lombok.Setter;
 @Setter
 public class Phone extends DomainDatatype {
 
+	/**
+	 *
+	 */
 	private static final long	serialVersionUID	= 1L;
 
-	//--Attributes-------------------------------------
+	//Atributes
 	@NotNull
 	@Range(min = 1, max = 999)
 	private Integer				countryCode;
 
+	@Range(min = 0, max = 999999)
 	@Pattern(regexp = "\\d{1,6}", message = "default.error.conversion")
 	private String				areaCode;
 
-	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}){0,5}", message = "default.error.conversion")
+	@NotBlank
+	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}{0,5})", message = "default.error.conversion")
 	private String				number;
 
-
-	//--Interface--------------------------
 
 	@Override
 	public String toString() {
 		StringBuilder result;
+
 		result = new StringBuilder();
 		result.append("<<+");
 		result.append(this.countryCode);
@@ -49,4 +54,5 @@ public class Phone extends DomainDatatype {
 		result.append(">>");
 		return result.toString();
 	}
+
 }
