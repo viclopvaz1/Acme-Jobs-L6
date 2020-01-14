@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-select code="anonymous.shout.label.author" options="path" path="author"/>
+	<acme:form-textbox code="anonymous.shout.label.author" path="author"/>
 	<acme:form-textarea code="anonymous.shout.label.text" path="text"/>
 
 	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>
