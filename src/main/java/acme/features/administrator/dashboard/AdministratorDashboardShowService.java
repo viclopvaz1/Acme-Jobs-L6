@@ -1,6 +1,7 @@
 
 package acme.features.administrator.dashboard;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
@@ -53,7 +54,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Collection<Object[]> gbs2 = this.repository.findBySector2();
 		Double total = this.repository.findTotalJobs();
 		Double totalap = this.repository.findTotalApplication();
-		Collection<Object[]> accepted = this.repository.findByAccepted(moment);
+		Collection<Object[]> Accepted = this.repository.findByAccepted(moment);
 		Collection<Object[]> Pending = this.repository.findByPending(moment);
 		Collection<Object[]> Rejected = this.repository.findByRejected(moment);
 
@@ -64,9 +65,21 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setRatioOfApplicationsGroupedByStatus(gbs2);
 		result.setTotalJobs(total);
 		result.setTotalApplications(totalap);
-		result.setAccepted(accepted);
+		result.setAccepted(Accepted);
 		result.setPending(Pending);
 		result.setRejected(Rejected);
+
+		//---------------------
+
+		Calendar calendar = new GregorianCalendar();
+		String[] dates = new String[28];
+		for (int i = 0; i < 28; i++) {
+			SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd");
+			dates[i] = format.format(calendar.getTime());
+			calendar.add(Calendar.DAY_OF_MONTH, -1);
+		}
+
+		result.setDias(dates);
 
 		return result;
 
