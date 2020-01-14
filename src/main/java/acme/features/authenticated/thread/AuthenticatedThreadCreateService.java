@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.participations.Participation;
 import acme.entities.threads.Thread;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -79,8 +80,12 @@ public class AuthenticatedThreadCreateService implements AbstractCreateService<A
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);
+		Participation participation = new Participation();
+		Principal principal = request.getPrincipal();
+		participation.setAuthenticated(this.repository.findAuthenticatedById(principal.getActiveRoleId()));
 		entity.setMoment(moment);
+		participation.setThread(entity);
 		this.repository.save(entity);
-
+		this.repository.save(participation);
 	}
 }
