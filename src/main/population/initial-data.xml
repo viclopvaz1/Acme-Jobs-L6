@@ -73,4 +73,48 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
+	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="sponsor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="One" />
+				<property name="email" value="sponsor1@acme.com" />
+				<property name="phone" value="+34 (890) 1234 5678" />
+
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1sponsor" />
+				<ref bean="sponsor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor1sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisationName" value="sponsor 1, Inc." />
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+
+	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+	<bean id="comercialbanner01" class="acme.entities.comercialbanners.ComercialBanner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Siente el sabor" />
+		<property name="targetUrl" value="https://www.cocacola.es/es/home/" />
+		<property name="creditCard" value="4679489831381972" />
+		<property name="name" value="Sponsor 1" />
+		<property name="network" value="Visa" />
+		<property name="monthExp" value="5" />
+		<property name="yearExp" value="2020" />
+		<property name="cvv" value="192" />
+		<property name="sponsor" ref="sponsor1sponsor" />
+
+	</bean>
+	
 </beans>
