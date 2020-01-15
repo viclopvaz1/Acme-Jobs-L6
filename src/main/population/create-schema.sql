@@ -63,6 +63,7 @@
        `id` integer not null,
         `version` integer not null,
         `firm` varchar(255),
+        `num_auditor_request` integer,
         `responsability_statement` varchar(255),
         `authenticated_id` integer not null,
         primary key (`id`)
@@ -78,7 +79,9 @@
     create table `banner` (
        `id` integer not null,
         `version` integer not null,
-        `image_url` varchar(255),
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -103,14 +106,14 @@
     create table `comercial_banner` (
        `id` integer not null,
         `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `target_url` varchar(255),
         `credit_card` varchar(255),
         `cvv` integer,
         `month_exp` integer,
         `name` varchar(255),
         `network` varchar(255),
-        `picture` varchar(255),
-        `slogan` varchar(255),
-        `target_url` varchar(255),
         `year_exp` integer,
         `sponsor_id` integer not null,
         primary key (`id`)
@@ -205,10 +208,10 @@
     create table `non_comercial_banner` (
        `id` integer not null,
         `version` integer not null,
-        `jingle` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `target_url` varchar(255),
+        `jingle` varchar(255),
         `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;

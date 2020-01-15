@@ -75,12 +75,13 @@ public class AdministratorAuditorCreateService implements AbstractCreateService<
 		AuditorRequest auditorRequest = this.repository.findAuditorRequestById(idRequest);
 		this.repository.delete(auditorRequest);
 	}
+
 	@Override
 	public void onSuccess(final Request<Auditor> request, final Response<Auditor> response) {
 		assert request != null;
 		assert response != null;
 
-		if (request.isMethod(HttpMethod.POST)) {
+		if (request.isMethod(HttpMethod.GET)) {
 			PrincipalHelper.handleUpdate();
 		}
 	}

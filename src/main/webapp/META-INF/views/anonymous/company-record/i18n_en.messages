@@ -22,3 +22,4 @@ anonymous.company-record.form.button.return = Return
 anonymous.company-record.list.label.name = Name
 anonymous.company-record.list.label.sector = Sector
 anonymous.company-record.list.label.webSite = WebSite
+anonymous.company-record.list.label.star = Star

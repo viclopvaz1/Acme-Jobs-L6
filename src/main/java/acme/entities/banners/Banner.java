@@ -19,6 +19,13 @@ public class Banner extends DomainEntity {
 
 	@NotBlank
 	@URL
-	private String				imageUrl;
+	private String				picture;
+
+	@NotBlank
+	private String				slogan;
+
+	@NotBlank
+	@URL
+	private String				targetUrl;
 
 }

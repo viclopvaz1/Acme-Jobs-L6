@@ -29,7 +29,7 @@ public class AdministratorAuditorRequestDeleteService implements AbstractDeleteS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "status");
+		request.bind(entity, errors, "numAuditorRequest");
 	}
 
 	@Override

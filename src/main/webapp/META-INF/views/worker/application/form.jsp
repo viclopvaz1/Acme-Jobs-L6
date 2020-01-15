@@ -26,8 +26,8 @@
 	      readonly="true"/>
 	      <acme:form-textbox code="worker.application.form.sponsor" path="worker.identity.fullName" readonly="true"/>
 	</jstl:if>
-	<acme:form-textarea code="worker.application.form.label.statement" path="statement"/>
-	<acme:form-textarea code="worker.application.form.label.skills" path="skills" />
+	<acme:form-textarea code="worker.application.form.label.statement" path="statement" readonly="true"/>
+	<acme:form-textarea code="worker.application.form.label.skills" path="skills" readonly="true"/>
 	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications" />
 
 	

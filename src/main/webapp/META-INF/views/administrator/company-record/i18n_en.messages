@@ -25,3 +25,4 @@ administrator.company-record.form.button.return = Return
 administrator.company-record.list.label.name = Name
 administrator.company-record.list.label.sector = Sector
 administrator.company-record.list.label.webSite = WebSite
+administrator.company-record.list.label.star = Star

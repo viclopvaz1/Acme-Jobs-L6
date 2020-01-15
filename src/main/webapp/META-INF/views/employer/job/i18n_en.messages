@@ -21,7 +21,7 @@ employer.job.form.label.moreInfo = More Info:
 employer.job.form.label.employer = Employer:
 employer.job.form.label.auditor = Auditor:
 employer.job.form.label.employer = Employer:
-employer.job.form.label.status = Status:
+employer.job.form.label.status = Final Mode:
 
 employer.job.form.button.audit-record = Audits Records 
 
@@ -34,7 +34,7 @@ employer.job.form.button.return = Return
 
 employer.job.form.placeholder.reference = Recomended the format: EMP1-JOB1
 
-administrator.challenge.form.error.tooClose = Deadline must be one week after the current date
+employer.job.form.error.tooClose = Deadline must be one week after the current date
 
 employer.job.form.error.zoneEurS = Only the euro, EUR or € currency is allowed
 employer.job.form.error.sumDuty = The sum of the percentages of the Duties must sum 1

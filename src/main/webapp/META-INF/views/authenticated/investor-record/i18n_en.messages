@@ -17,3 +17,5 @@ authenticated.investor-record.form.button.return = Return
 
 authenticated.investor-record.list.label.investor = Investor
 authenticated.investor-record.list.label.sector = Sector
+authenticated.investor-record.list.label.statement = Statement of Investor:
+authenticated.investor-record.list.label.star = Number of starts (between 1 and 5):

@@ -24,6 +24,8 @@ public class AuditorRequest extends DomainEntity {
 	@NotBlank
 	private String				responsabilityStatement;
 
+	private Integer				numAuditorRequest;
+
 	@NotNull
 	@Valid
 	@OneToOne(optional = false)
