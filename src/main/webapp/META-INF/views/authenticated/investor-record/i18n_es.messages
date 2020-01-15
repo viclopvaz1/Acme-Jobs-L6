@@ -17,3 +17,5 @@ authenticated.investor-record.form.button.return = Volver
 
 authenticated.investor-record.list.label.investor = Inversor
 authenticated.investor-record.list.label.sector = Sector
+authenticated.investor-record.list.label.statement = Declaraciones del Inversor
+authenticated.investor-record.list.label.star = Número de Estrellas (entre 1 y 5)

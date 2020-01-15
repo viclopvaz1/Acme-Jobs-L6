@@ -30,7 +30,7 @@ public class AdministratorAuditorRequestListService implements AbstractListServi
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "firm", "responsabilityStatement");
+		request.unbind(entity, model, "firm", "responsabilityStatement", "numAuditorRequest");
 	}
 
 	@Override

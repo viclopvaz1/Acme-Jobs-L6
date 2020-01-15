@@ -143,21 +143,33 @@
 		<property name="phone" value="+361 (5123) 456127" />
 		<property name="email" value="jeje@gmail.com" />
 		<property name="indication" value="false" />
-		<property name="star" value="3" />
+		<property name="star" value="3"/>
 	</bean>
-
-	<bean id="challenge01" class="acme.entities.challenges.Challenge">
-		<property name="title" value="titulo1"></property>
-		<property name="description" value="description1"></property>
-		<property name="deadline" value="2020/03/25 00:00"></property>
-		<property name="goldReward" value="1500.0€"></property>
-		<property name="silverReward" value="1000.0€"></property>
-		<property name="bronzeReward" value="800.0€"></property>
-		<property name="goldGoal" value="valorgO"></property>
-		<property name="silverGoal" value="valorgP"></property>
-		<property name="bronzeGoal" value="valorgB"></property>
+	
+	<bean id="companyrecord03" class="acme.entities.companyrecords.CompanyRecord">
+		<property name="name" value="Microsoft" />
+		<property name="sector" value="VideoGames" />
+		<property name="ceo" value="Vicente" />
+		<property name="description" value="Example 3" />
+		<property name="webSite" value="https://www.example.es" />
+		<property name="phone" value="+361 (5123) 456127" />
+		<property name ="email" value="jeje@gmail.com" />
+		<property name="indication" value="true" />
+		<property name="star" value="0"/>
 	</bean>
-
+	
+	<bean id ="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="titulo1"></property> 
+		<property name="description" value="description1"></property> 
+		<property name="deadline" value="2020/03/25 00:00"></property> 
+		<property name="goldReward" value="1500.0€"></property> 
+		<property name="silverReward" value="1000.0€"></property> 
+		<property name="bronzeReward" value="800.0€"></property> 
+		<property name="goldGoal" value="valorgO"></property> 
+		<property name="silverGoal" value="valorgP"></property> 
+		<property name="bronzeGoal" value="valorgB"></property> 
+	</bean>
+	
 	<bean id="configuration01" class="acme.entities.configurations.Configuration">
 		<property name="spamWords"
 			value=" viagra, sex, 
@@ -168,8 +180,7 @@
 
 
 	<bean id="comercialbanner01" class="acme.entities.comercialbanners.ComercialBanner">
-		<property name="picture"
-			value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png" />
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="Siente el sabor" />
 		<property name="targetUrl" value="https://www.cocacola.es/es/home/" />
 		<property name="creditCard" value="4679489831381972" />
@@ -183,28 +194,50 @@
 	</bean>
 
 	<bean id="comercialbanner02" class="acme.entities.comercialbanners.ComercialBanner">
-		<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/Carrefour.png" />
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="slogan" value="Compra" />
 		<property name="targetUrl" value="https://www.carrefous.es/es/home/" />
 		<property name="creditCard" value="4294939855393654" />
-		<property name="name" value="Sponsor 1" />
-		<property name="network" value="Visa" />
-		<property name="monthExp" value="5" />
-		<property name="yearExp" value="2020" />
-		<property name="cvv" value="192" />
-		<property name="sponsor" ref="sponsor1sponsor" />
-
+		<property name="name" value="Sponsor 1"/>
+		<property name="network" value="Visa"/>
+		<property name="monthExp" value="5"/>
+		<property name="yearExp" value="2020"/>
+		<property name="cvv" value="192"/>
+		<property name="sponsor" ref="sponsor1sponsor"/> 
+		
 	</bean>
-
+	
+	<bean id="comercialbanner03" class="acme.entities.comercialbanners.ComercialBanner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Compra 2" />
+		<property name="targetUrl" value="https://www.carrefous.es/es/home/" />
+		<property name="creditCard" value="4294939855393654" />
+		<property name="name" value="Sponsor 1"/>
+		<property name="network" value="Visa"/>
+		<property name="monthExp" value="5"/>
+		<property name="yearExp" value="2020"/>
+		<property name="cvv" value="192"/>
+		<property name="sponsor" ref="sponsor2sponsor"/> 
+		
+	</bean>
+	
 	<bean id="noncomercialbanner01" class="acme.entities.noncomercialbanners.NonComercialBanner">
-		<property name="picture" value="https://www.mercadona.es/web-display-img.png" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="Algo más que palabras" />
 		<property name="targetUrl" value="https://www.mercadona.es" />
 		<property name="jingle" value="https://www.youtube.com/watch?v=ytT6355sDr4" />
 		<property name="sponsor" ref="sponsor1sponsor" />
 	</bean>
-
-	<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
+	
+	<bean id="noncomercialbanner02" class="acme.entities.noncomercialbanners.NonComercialBanner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Algo más que palabras 2" />
+		<property name="targetUrl" value="https://www.mercadona.es" />
+		<property name="jingle" value="https://www.youtube.com/watch?v=ytT6355sDr4" />
+		<property name="sponsor" ref="sponsor2sponsor"/>
+	</bean>
+	
+		<bean name="employer1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="employer1" />
 		<property name="password" value="employer1" />
 		<property name="enabled" value="true" />
@@ -643,12 +676,12 @@
 	<bean name="thread02" class="acme.entities.threads.Thread">
 		<property name="title" value="Sample thread 2" />
 		<property name="moment" value="2030/12/11 23:59" />
-		<property name="creatorUser" ref="employer1Authenticated" />
+		<property name="creatorUser" ref="employer1Authenticated"/>
 	</bean>
-
+		
 	<bean name="participation01" class="acme.entities.participations.Participation">
-		<property name="thread" ref="thread01" />
+		<property name="thread" ref="thread01"/>
 		<property name="authenticated" ref="worker1Authenticathed" />
 	</bean>
-
+	
 </beans>
