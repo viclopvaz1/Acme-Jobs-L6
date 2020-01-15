@@ -17,8 +17,8 @@
 
 <acme:form>
 
-	<acme:form-textbox code="authenticated.worker.worker.form.label.qualifications" path="qualificationsRecord"/>
-	<acme:form-textbox code="authenticated.worker.worker.form.label.skills" path="skillsRecord"/>
+	<acme:form-textarea code="authenticated.worker.worker.form.label.qualifications" path="qualificationsRecord"/>
+	<acme:form-textarea code="authenticated.worker.worker.form.label.skills" path="skillsRecord"/>
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.worker.worker.form.button.create" action="/authenticated/worker/create"/>
 	<acme:form-submit test="${command == 'update'}" code="authenticated.worker.worker.form.button.update" action="/authenticated/worker/update"/>

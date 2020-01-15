@@ -22,3 +22,4 @@ authenticated.company-record.form.button.return = Return
 authenticated.company-record.list.label.name = Name
 authenticated.company-record.list.label.sector = Sector
 authenticated.company-record.list.label.webSite = WebSite
+authenticated.company-record.list.label.star = Star

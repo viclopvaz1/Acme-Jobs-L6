@@ -17,11 +17,18 @@
 
 <acme:form>
 
+<jstl:if test="${numAuditorRequest == 0}">
 	<acme:form-textarea code="authenticated.auditor-request.form.label.firm" path="firm" />
 	<acme:form-textarea code="authenticated.auditor-request.form.label.responsabilityStatement" path="responsabilityStatement" />
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor-request.form.button.create" action="/authenticated/auditor-request/create"/>
+</jstl:if>
 
+<jstl:if test="${numAuditorRequest == 1}">
+
+	<acme:message code="auditor.error.exist"/>
+	</br>
+</jstl:if>
   	<acme:form-return code="authenticated.auditor-request.form.button.return" />
 	
 </acme:form>
