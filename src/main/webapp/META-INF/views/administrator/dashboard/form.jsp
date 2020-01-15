@@ -51,12 +51,6 @@
 </div>
 
 </br>
-<h2>
-	<acme:message code="administrator.dashboard.form.message5"/>
-</h2>
-<div>
-	<canvas id="canvas9" style="width: 50%; height: 100px;"></canvas>
-</div>
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -346,117 +340,6 @@
 		
 	});
 		
-</script>
-
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		var data = {	
-				datasets : [
-					{
-						borderColor:"rgba(74, 189, 172, 0.7)",
-						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"Accepted",
-						
-						data :[	
-							<jstl:forEach var="e" items="${Dias}">
-							<jstl:set var="valueDate" value="0"/>
-								{
-									t: new Date("<jstl:out value='${e}'/>"),
-								<jstl:forEach var="i" items="${Accepted}">
-									<jstl:if test="${e==i[0]}">
-										<jstl:set var="valueDate" value="${i[1]}"/>
-									</jstl:if>
-								</jstl:forEach>
-									y:<jstl:out value='${valueDate}'/>
-								},
-							</jstl:forEach>
-					 	]
-					},
-					{
-						borderColor:"rgba(255, 102, 102,0.7)",
-						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"Rejected",
-						
-						data :[	
-							<jstl:forEach var="e" items="${Dias}">
-							<jstl:set var="valueDate" value="0"/>
-							
-							{
-							t: new Date("<jstl:out value='${e}'/>"),
-							
-							<jstl:forEach var="i" items="${Rejected}">
-								<jstl:if test="${e==i[0]}">
-									<jstl:set var="valueDate" value="${i[1]}"/>
-								</jstl:if>
-							</jstl:forEach>
-							
-							y:<jstl:out value='${valueDate}'/>
-							},
-						</jstl:forEach>
-					 	]
-					},
-					{
-						borderColor:"rgba(247, 183, 51, 0.7)",
-						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"Pending",
-						
-						data :[
-							<jstl:forEach var="e" items="${Dias}">
-							<jstl:set var="valueDate" value="0"/>
-							
-							{
-							t: new Date("<jstl:out value='${e}'/>"),
-							
-							<jstl:forEach var="i" items="${Pending}">
-								<jstl:if test="${e==i[0]}">
-									<jstl:set var="valueDate" value="${i[1]}"/>
-								</jstl:if>
-							</jstl:forEach>
-							
-							y:<jstl:out value='${valueDate}'/>
-							},
-						</jstl:forEach>
-					 	]
-					},					
-				]
-			};
-		
-		var options = {
-				scales: {
-		            xAxes: [{
-		                type: 'time',
-		                distribution: 'series',
-		                time:{
-		                	unit:'day'
-		                }
-		                
-		            }],
-		            yAxes : [
-						{
-							ticks : {
-								suggestedMin : 0.0,
-								suggestedMax : 1.0
-							}
-						}
-					]
-		        },
-			legend : {
-				display: true
-			}
-		};
-	
-		var canvas3, context;
-		canvas3=document.getElementById("canvas9");
-		context=canvas3.getContext("2d");
-		
-		new Chart( context, {
-			type : "line",
-			data : data,
-			options : options
-		});
-	});
-	
 </script>
 
 
