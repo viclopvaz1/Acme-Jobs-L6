@@ -356,10 +356,10 @@
 					{
 						borderColor:"rgba(74, 189, 172, 0.7)",
 						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"<acme:message code='administrator.chart.form.label.acceptedPerDay'/>",
+						label:"Accepted",
 						
 						data :[	
-							<jstl:forEach var="e" items="${zerosToActualDate}">
+							<jstl:forEach var="e" items="${Dias}">
 							<jstl:set var="valueDate" value="0"/>
 								{
 									t: new Date("<jstl:out value='${e}'/>"),
@@ -376,10 +376,10 @@
 					{
 						borderColor:"rgba(255, 102, 102,0.7)",
 						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"<acme:message code='administrator.chart.form.label.rejectedPerDay'/>",
+						label:"Rejected",
 						
 						data :[	
-							<jstl:forEach var="e" items="${zerosToActualDate}">
+							<jstl:forEach var="e" items="${Dias}">
 							<jstl:set var="valueDate" value="0"/>
 							
 							{
@@ -399,10 +399,10 @@
 					{
 						borderColor:"rgba(247, 183, 51, 0.7)",
 						backgroundColor:"rgba(255, 255, 255, 0)",
-						label:"<acme:message code='administrator.chart.form.label.pendingPerDay'/>",
+						label:"Pending",
 						
 						data :[
-							<jstl:forEach var="e" items="${zerosToActualDate}">
+							<jstl:forEach var="e" items="${Dias}">
 							<jstl:set var="valueDate" value="0"/>
 							
 							{

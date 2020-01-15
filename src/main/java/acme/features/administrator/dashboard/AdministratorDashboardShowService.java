@@ -36,7 +36,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector", "ratioOfJobsGroupedByStatus", "ratioOfApplicationsGroupedByStatus", "TotalJobs", "TotalApplications", "Accepted", "Pending", "Rejected");
+		request.unbind(entity, model, "numberOfCompaniesGroupedBySector", "numberOfInvestorsGroupedBySector", "ratioOfJobsGroupedByStatus", "ratioOfApplicationsGroupedByStatus", "TotalJobs", "TotalApplications", "Accepted", "Pending", "Rejected", "Dias");
 
 	}
 
