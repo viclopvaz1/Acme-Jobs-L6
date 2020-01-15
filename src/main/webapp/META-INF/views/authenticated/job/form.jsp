@@ -14,7 +14,7 @@
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description" />
 	<acme:form-textbox code="authenticated.job.form.label.moreInfo" path="moreInfo" />
 
-	<acme:form-textbox code="authenticated.job.form.label.status" path="status" />
+	<acme:form-checkbox code="authenticated.job.form.label.status" path="status"/>
 	
 	<acme:form-textbox code="authenticated.job.form.label.employer" path="employer.identity.fullName" />
 		
