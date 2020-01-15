@@ -31,4 +31,6 @@ public class Dashboard implements Serializable {
 
 	Collection<Object[]>		Rejected;
 
+	String[]					Dias;
+
 }

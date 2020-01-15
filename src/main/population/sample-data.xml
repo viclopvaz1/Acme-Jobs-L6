@@ -330,7 +330,7 @@
 	</bean>
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB1:W102" />
-		<property name="moment" value="2019/12/13 10:00" />
+		<property name="moment" value="2020/01/01 10:00"/>
 		<property name="status" value="accepted" />
 		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
@@ -350,7 +350,7 @@
 	</bean>
 	<bean name="application4" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB5:W101" />
-		<property name="moment" value="2019/12/12 10:00" />
+		<property name= "moment" value="2020/01/01 10:00"/>
 		<property name="status" value="pending" />
 		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
@@ -370,7 +370,7 @@
 	</bean>
 	<bean name="application6" class="acme.entities.applications.Application">
 		<property name="referenceNumber" value="EMP1-JOB8:W101" />
-		<property name="moment" value="2019/12/12 10:00" />
+		<property name="moment" value="2020/01/01 10:00"/>
 		<property name="status" value="rejected" />
 		<property name="statement" value="pepe" />
 		<property name="skills" value="Mu bueno" />
